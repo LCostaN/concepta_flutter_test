@@ -39,8 +39,7 @@ ThemeData get theme => ThemeData.dark().copyWith(
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),
-        titleSmall: TextStyle(
-          color: _primaryColor
-        ),
+        titleSmall: TextStyle(color: _primaryColor),
+        bodyMedium: TextStyle(color: _primaryColor),
       ),
     );
