@@ -23,7 +23,7 @@ class CollapsibleSearchOptions extends StatelessWidget {
       shrinkWrap: true,
       padding: EdgeInsets.zero,
       itemCount: showRecent
-          ? max(recentSearches.length, 1)
+          ? recentSearches.length + 1
           : max(searchResult.length, 1),
       itemBuilder: (context, i) {
         if (i == 0) {
@@ -47,7 +47,7 @@ class CollapsibleSearchOptions extends StatelessWidget {
         }
 
         return CollapsibleSearchItem(
-          text: showRecent ? recentSearches[i].text : searchResult[i],
+          text: showRecent ? recentSearches[i - 1].text : searchResult[i],
         );
       },
       separatorBuilder: (_, __) => const Divider(),

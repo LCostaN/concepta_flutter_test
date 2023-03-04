@@ -2,10 +2,16 @@ import 'package:concepta_test/model/search_model.dart';
 import 'package:concepta_test/utils/local_utils.dart';
 import 'package:flutter/foundation.dart';
 
-class RecentSearchProvider with ChangeNotifier {
+class SearchProvider with ChangeNotifier {
   List<SearchModel> searches = [];
+  bool _isOpen = false;
+  bool get isOpen => _isOpen;
+  set isOpen(bool value) {
+    _isOpen = value;
+    notifyListeners();
+  }
 
-  RecentSearchProvider() {
+  SearchProvider() {
     refresh();
   }
 

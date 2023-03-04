@@ -44,10 +44,10 @@ class _CollapsibleSearchItemState extends State<CollapsibleSearchItem> {
   }
 
   void goToDetails(String text) async {
-    LocalUtils()
-        .addSearch(text)
-        .then((_) => context.read<RecentSearchProvider>().refresh());
-        
+    var provider = context.read<SearchProvider>();
+
+    LocalUtils().addSearch(text).then((_) => provider.refresh());
+
     await Navigator.of(context).push(
       MaterialPageRoute(builder: (context) => ResultView(package: text)),
     );

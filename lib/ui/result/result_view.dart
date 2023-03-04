@@ -56,7 +56,7 @@ class _ResultViewState extends State<ResultView> {
                     return Card(
                       margin: const EdgeInsets.only(top: 12),
                       child: SizedBox(
-                        height: 180,
+                        height: 190,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [

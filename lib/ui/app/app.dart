@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => RecentSearchProvider(),
+      create: (context) => SearchProvider(),
       builder: (context, _) => MaterialApp(
         title: 'Concepta Flutter Test',
         theme: theme,
